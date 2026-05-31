@@ -5,7 +5,7 @@ from ultralytics import YOLO
 # Cargamos el modelo YOLO (usaremos yolov8n.pt por defecto, idealmente yolov8n-face.pt)
 try:
     model = YOLO('models/yolov8n-face.pt')
-except:
+except Exception:
     model = YOLO('yolov8n.pt')
 
 def detect_faces(image):
